@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+/* global css */
+body {
+    margin: 0;
+    padding: 0;
+    background: #141414;
+    font-family: "Open Sans", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    padding-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    width: 150px;
+    height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+/* slider css */
+.slider-wrapper {
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider {
+    display: flex;
+    position: relative;
+}
+
+.slider__container {
+    display: flex;
+    padding: 0 55px;
+    width: 100%;
+    z-index: 3;
+    transition: transform 300ms ease 100ms;
+}
+
+.slider__container:hover .item {
+    transform: translateX(-25%);
+}
+
+.item {
+    flex: 0 0 11.7%;
+    text-align: center;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+}
+
+.item:hover ~ .item {
+    transform: translateX(25%);
+}
+
+.item:hover {
+    transform: scale(1.5) !important;
+}
+
+.show-details-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    /* opacity: 0; */
+    transition: opacity 300ms ease 100ms;
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+}
+
+.show-details-btn span {
+    display: block;
+    width: 2em;
+    margin: 0 auto;
+    color: white;
+}
+
+.fas {
+    font-size: 3.2em;
+    cursor: pointer;
 }
