@@ -37,23 +37,27 @@ const Search = () => {
                 </button>
             </form>
 
-            <div className="results-container">
-                {items
-                    .filter((item) => item.show.name)
-                    .map((item) => (
-                        <div className="card" key={item.show.id}>
-                            <img
-                                src={item.show.image.medium}
-                                alt={item.show.name}
-                            />
-                            <div className="card__content">
-                                <h3 className="card__title">
-                                    {item.show.name}
-                                </h3>
-                                <p>Rating: {item.show.rating.average}</p>
+            <div className="slider-wrapper">
+                <div className="slider__container">
+                    {items
+                        .filter((item) => item.show.name)
+                        .map((item) => (
+                            <div className="item" key={item.show.id}>
+                                {item.show.image && (
+                                    <img
+                                        src={item.show.image.medium}
+                                        alt={item.show.name}
+                                    />
+                                )}
+                                <div className="card__content">
+                                    <h3 className="card__title">
+                                        {item.show.name}
+                                    </h3>
+                                    <p>Rating: {item.show.rating.average}</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                </div>
             </div>
         </>
     );

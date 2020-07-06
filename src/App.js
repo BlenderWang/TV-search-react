@@ -16,7 +16,7 @@ function App() {
                 .sort((a, b) => (a.rating.average > b.rating.average ? -1 : 1))
                 .slice(0, 9);
 
-            console.log(topTenshows);
+            // console.log(topTenshows);
 
             setItems(topTenshows);
             setIsLoading(false);
@@ -28,6 +28,7 @@ function App() {
     return (
         <div className="container">
             <Header />
+
             <SliderWrapper isLoading={isLoading} items={items} />
         </div>
     );

@@ -4,7 +4,7 @@ import Search from "./Search";
 
 const Header = () => {
     return (
-        <header className="center">
+        <header className="header">
             <img src={laptop} alt="laptop" className="logo" />
             <Search />
         </header>

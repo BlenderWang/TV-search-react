@@ -10,10 +10,16 @@ body {
     padding-top: 50px;
 }
 
-.center {
+/* header */
+.header {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
-    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
 }
 
 .logo {
