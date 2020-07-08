@@ -8,6 +8,7 @@ body {
 
 .container {
     padding-top: 50px;
+    padding-bottom: 50px;
 
     /* display: grid;
     grid-template-columns: repeat(2, 100%); */
@@ -43,6 +44,11 @@ body {
     display: flex;
     position: relative;
 } */
+
+.slider__title {
+    padding: 0 55px;
+    color: white;
+}
 
 .slider__container {
     display: flex;
