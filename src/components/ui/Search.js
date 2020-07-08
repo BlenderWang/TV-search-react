@@ -23,7 +23,7 @@ const Search = () => {
     return (
         <>
             <form className="form" onSubmit={searchItems}>
-                <label htmlFor="query" className="label"></label>
+                {/* <label htmlFor="query" className="label"></label> */}
                 <input
                     type="text"
                     className="input"

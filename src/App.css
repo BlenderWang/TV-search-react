@@ -18,7 +18,8 @@ body {
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    justify-items: stretch;
+    align-items: center;
 
     overflow: hidden;
     position: relative;
@@ -27,23 +28,52 @@ body {
 }
 
 .logo {
+    padding: 0 55px;
     width: 90px;
     height: auto;
 }
 
+/* search field */
+.form {
+    display: grid;
+    grid-template-columns: 55% 30%;
+    grid-gap: 15px;
+}
+
+.input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    line-height: 0.8rem;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.form .button {
+    background-color: rgba(0, 0, 0, 0.35);
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 250ms;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 /* slider css */
 .slider-wrapper {
+    margin-top: 55px;
     padding: 40px 0;
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
 }
-
-/* .slider {
-    display: flex;
-    position: relative;
-} */
 
 .slider__title {
     padding: 0 55px;
@@ -106,7 +136,42 @@ body {
     color: white;
 }
 
+.slider-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 40px 0;
+    z-index: 4;
+}
+
+.slider-btn span {
+    width: 25px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+.slider-btn--prev {
+    left: 0;
+}
+
+.slider-btn--prev span {
+    transform: rotateZ(90deg);
+}
+
+.slider-btn--next {
+    right: 0;
+}
+
+.slider-btn--next span {
+    transform: rotateZ(-90deg);
+}
+
 .fas {
     font-size: 3.2em;
-    cursor: pointer;
 }

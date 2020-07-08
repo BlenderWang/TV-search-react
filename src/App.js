@@ -3,6 +3,8 @@ import axios from "axios";
 import "./App.css";
 import Header from "./components/ui/Header";
 import SliderWrapper from "./components/sliders/SliderWrapper";
+import Slider from "./components/sliders/Slider";
+import Title from "./components/ui/Title";
 
 function App() {
     const [items, setItems] = useState([]);
@@ -46,43 +48,20 @@ function App() {
         <div className="container">
             <Header />
 
-            <SliderWrapper isLoading={isLoading} items={items} />
+            <SliderWrapper>
+                <Title title={"Top Show"} />
+                <Slider isLoading={isLoading} items={items} />
+            </SliderWrapper>
 
-            <section className="slider-wrapper">
-                <h2 className="slider__title">Comedy</h2>
+            <SliderWrapper>
+                <Title title={"Comedy"} />
+                <Slider isLoading={isLoading} items={genres} />
+            </SliderWrapper>
 
-                <div className="slider__container">
-                    <span>
-                        <i className="fas fa-angle-left"></i>
-                    </span>
-                    {genres.map((genre) => (
-                        <div className="item" key={genre.id}>
-                            <img src={genre.image.medium} alt={genre.name} />
-                        </div>
-                    ))}
-                    <span>
-                        <i className="fas fa-angle-right"></i>
-                    </span>
-                </div>
-            </section>
-
-            <section className="slider-wrapper">
-                <h2 className="slider__title">Already Ended</h2>
-
-                <div className="slider__container">
-                    <span>
-                        <i className="fas fa-angle-left"></i>
-                    </span>
-                    {premiered.map((date) => (
-                        <div className="item" key={date.id}>
-                            <img src={date.image.medium} alt={date.name} />
-                        </div>
-                    ))}
-                    <span>
-                        <i className="fas fa-angle-right"></i>
-                    </span>
-                </div>
-            </section>
+            <SliderWrapper>
+                <Title title={"Already Ended"} />
+                <Slider isLoading={isLoading} items={premiered} />
+            </SliderWrapper>
         </div>
     );
 }
