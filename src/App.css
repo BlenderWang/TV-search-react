@@ -29,15 +29,16 @@ body {
 
 .logo {
     padding: 0 55px;
-    width: 90px;
+    width: 15rem;
     height: auto;
 }
 
 /* search field */
 .form {
     display: grid;
-    grid-template-columns: 55% 30%;
+    grid-template-columns: 45% 10%;
     grid-gap: 15px;
+    justify-content: center;
 }
 
 .input {
@@ -46,23 +47,27 @@ body {
     line-height: 0.8rem;
     border-radius: 2px;
     border: 1px solid #ddd;
+    background-color: transparent;
     margin-bottom: 1rem;
 }
 
 .form .button {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: transparent;
     color: white;
     margin-bottom: 1rem;
     padding: 0.5rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    border-radius: 2px;
-    font-size: 1rem;
+    border: none;
     cursor: pointer;
     transition: background-color 250ms;
 }
 
 .button:hover {
     background-color: rgba(0, 0, 0, 0.75);
+}
+
+.fa-search {
+    font-size: 1.5rem !important;
+    color: #ddd;
 }
 
 /* slider css */

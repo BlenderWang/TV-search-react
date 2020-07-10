@@ -1,11 +1,11 @@
 import React from "react";
-import laptop from "../../images/laptop.svg";
+import searchLogo from "../../images/searchLogo.svg";
 import Search from "./Search";
 
 const Header = () => {
     return (
         <header className="header">
-            <img src={laptop} alt="laptop" className="logo" />
+            <img src={searchLogo} alt="logo" className="logo" />
             <Search />
         </header>
     );
