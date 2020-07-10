@@ -33,7 +33,7 @@ const Search = () => {
                     placeholder="i.e. Dorahodora"
                 />
                 <button className="button" type="submit">
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                 </button>
             </form>
 
