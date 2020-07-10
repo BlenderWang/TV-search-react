@@ -105,6 +105,10 @@ body {
     color: white;
 }
 
+.slider__container--translate {
+    transform: translateX(100%);
+}
+
 .item {
     flex: 0 0 11.7%;
     text-align: center;
