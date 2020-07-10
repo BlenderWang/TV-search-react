@@ -15,6 +15,7 @@ const Search = () => {
 
             console.log(res.data);
             setItems(res.data);
+            setQuery("");
         } catch (err) {
             console.log(err);
         }
@@ -37,8 +38,11 @@ const Search = () => {
                 </button>
             </form>
 
-            <div className="slider-wrapper">
-                <div className="slider__container">
+            <div className="slider-wrapper result">
+                <div
+                    className="slider__container"
+                    style={{ marginTop: "6rem" }}
+                >
                     {items
                         .filter((item) => item.show.name)
                         .map((item) => (
@@ -49,12 +53,12 @@ const Search = () => {
                                         alt={item.show.name}
                                     />
                                 )}
-                                <div className="card__content">
+                                {/* <div className="card__content">
                                     <h3 className="card__title">
                                         {item.show.name}
                                     </h3>
                                     <p>Rating: {item.show.rating.average}</p>
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                 </div>
