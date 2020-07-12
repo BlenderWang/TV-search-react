@@ -1,68 +1,23 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+// import axios from "axios";
+// import SearchRes from "./SearchRes";
 
-const Search = () => {
-    const [query, setQuery] = useState("");
-    const [items, setItems] = useState([]);
-
-    const searchItems = async (e) => {
-        e.preventDefault();
-
-        const url = `http://api.tvmaze.com/search/shows?q=${query}`;
-
-        try {
-            const res = await axios(url);
-
-            console.log(res.data);
-            setItems(res.data);
-            setQuery("");
-        } catch (err) {
-            console.log(err);
-        }
-    };
-
+const Search = ({ query, onChange, onSubmit }) => {
     return (
         <>
-            <form className="form" onSubmit={searchItems}>
-                {/* <label htmlFor="query" className="label"></label> */}
+            <form className="form" onSubmit={onSubmit}>
                 <input
                     type="text"
                     className="input"
                     name="query"
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    onChange={onChange}
                     placeholder="i.e. Dorahodora"
                 />
                 <button className="button" type="submit">
                     <i className="fas fa-search"></i>
                 </button>
             </form>
-
-            <div className="slider-wrapper result">
-                <div
-                    className="slider__container"
-                    style={{ marginTop: "6rem" }}
-                >
-                    {items
-                        .filter((item) => item.show.name)
-                        .map((item) => (
-                            <div className="item" key={item.show.id}>
-                                {item.show.image && (
-                                    <img
-                                        src={item.show.image.medium}
-                                        alt={item.show.name}
-                                    />
-                                )}
-                                {/* <div className="card__content">
-                                    <h3 className="card__title">
-                                        {item.show.name}
-                                    </h3>
-                                    <p>Rating: {item.show.rating.average}</p>
-                                </div> */}
-                            </div>
-                        ))}
-                </div>
-            </div>
         </>
     );
 };

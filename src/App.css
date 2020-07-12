@@ -34,7 +34,7 @@ body {
     grid-area: logo;
 
     padding: 0 55px;
-    width: 15rem;
+    width: 20vmax;
     height: auto;
 }
 
@@ -43,7 +43,7 @@ body {
     grid-area: search;
 
     display: grid;
-    grid-template-columns: 55% 10%;
+    grid-template-columns: 40% 10%;
     grid-gap: 15px;
     justify-content: center;
 }
