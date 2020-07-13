@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import searchLogo from "../../images/searchLogo.svg";
-import Search from "./Search";
+// import Search from "./Search";
 import SearchRes from "./SearchRes";
 
 const Header = () => {
@@ -30,8 +30,25 @@ const Header = () => {
 
     return (
         <header className="header">
-            <img src={searchLogo} alt="logo" className="logo" />
-            <Search onChange={onChange} onSubmit={searchItems} />
+            <a href="/">
+                <img src={searchLogo} alt="logo" className="logo" />
+            </a>
+            {/* <Search value={query} onChange={onChange} onSubmit={searchItems} /> */}
+            <>
+                <form className="form" onSubmit={searchItems}>
+                    <input
+                        type="text"
+                        className="input"
+                        name="query"
+                        value={query}
+                        onChange={onChange}
+                        placeholder="i.e. Dorahodora"
+                    />
+                    <button className="button" type="submit">
+                        <i className="fas fa-search"></i>
+                    </button>
+                </form>
+            </>
             <SearchRes items={items} />
         </header>
     );

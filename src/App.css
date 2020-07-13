@@ -9,15 +9,12 @@ body {
 .container {
     padding-top: 50px;
     padding-bottom: 50px;
-
-    /* display: grid;
-    grid-template-columns: repeat(2, 100%); */
 }
 
 /* header */
 .header {
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "logo search"
         "res res";
@@ -56,6 +53,7 @@ body {
     border: 1px solid #ddd;
     background-color: transparent;
     margin-bottom: 1rem;
+    color: #ddd;
 }
 
 .form .button {
@@ -85,6 +83,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
+    height: auto;
+    position: relative;
 }
 
 /* slider css */
