@@ -1,0 +1,63 @@
+@import "./components/ui/header.scss";
+@import "./components/sliders/slider.scss";
+@import "./components/sliders/sliderBtn.scss";
+
+/* global css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 10%,
+        rgba(0, 0, 0, 0)
+    );
+    background-color: rgb(20, 20, 20);
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content {
+    position: relative;
+    height: 37vw;
+    margin-top: -40px;
+}
+
+.content__background,
+.content__background__shadow,
+.content__background__image,
+.content__area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.content__background {
+    left: 0;
+    right: 0;
+}
+
+.content__background__shadow {
+    left: 0;
+    background: #000;
+    width: 30%;
+    z-index: 2;
+}
+
+.content__background__shadow::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    background-image: linear-gradient(to right, #000, transparent);
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 275px;
+}

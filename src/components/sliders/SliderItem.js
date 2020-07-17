@@ -1,15 +1,14 @@
 import React from "react";
+// import SliderButton from "./SliderButton";
 
 const SliderItem = ({ item }) => {
     return (
-        <div className="item">
-            <img src={item.image.medium} className="" alt={item.name} />
-            {/* <button className="show-details-btn">
-                <span>
-                    <i className="fas fa-angle-down"></i>
-                </span>
-            </button> */}
-        </div>
+        <>
+            <div className="item">
+                <img src={item.image.medium} alt="" />
+            </div>
+            {/* <SliderButton onClick={() => console.log("click")} /> */}
+        </>
     );
 };
 

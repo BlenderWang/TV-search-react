@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./App.css";
+import "./App.scss";
 import Header from "./components/ui/Header";
 import SliderWrapper from "./components/sliders/SliderWrapper";
 import Slider from "./components/sliders/Slider";

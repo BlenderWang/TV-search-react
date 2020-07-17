@@ -1,0 +1,69 @@
+/* slider css */
+.slider-wrapper {
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__title {
+    padding: 0 55px;
+    color: white;
+}
+
+.slider__container {
+    display: flex;
+    padding: 0 55px;
+    width: 100%;
+    z-index: 3;
+    transition: transform 300ms ease 100ms;
+
+    &:hover .item {
+        transform: translateX(-25%);
+    }
+
+    span {
+        cursor: pointer;
+        position: absolute;
+    }
+
+    i {
+        color: white;
+    }
+}
+
+.item {
+    flex: 0 0 11.7%;
+    text-align: center;
+    margin: 0 2px;
+    transition: transform 300ms ease 100ms;
+
+    &:hover {
+        transform: scale(1.5) !important;
+    }
+}
+
+.item:hover ~ .item {
+    transform: translateX(25%);
+}
+
+.show-details-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    /* opacity: 0; */
+    transition: opacity 300ms ease 100ms;
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+
+    span {
+        display: block;
+        width: 2em;
+        margin: 0 auto;
+        color: white;
+    }
+}
