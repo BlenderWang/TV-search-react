@@ -29,7 +29,8 @@
     display: grid;
     grid-template-columns: 40% 10%;
     grid-gap: 15px;
-    justify-content: center;
+    justify-content: end;
+    padding-right: 55px;
 
     .input {
         font-size: 1rem;
